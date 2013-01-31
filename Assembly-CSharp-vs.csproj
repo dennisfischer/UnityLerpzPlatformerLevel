@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{56A63D77-31D4-A557-DBBF-8BEFF87ED06B}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\2D\Camera\CameraFocus.cs" />
+     <Compile Include="Assets\Scripts\2D\Camera\CameraScrolling.cs" />
+     <Compile Include="Assets\Scripts\2D\Camera\CameraTargetAttributes.cs" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\Lerpz.cs" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerController.cs" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerPlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerPushBodies.cs" />
+     <Compile Include="Assets\Scripts\2D\DeathTrigger.cs" />
+     <Compile Include="Assets\Scripts\2D\LevelAttributes.cs" />
+     <Compile Include="Assets\Scripts\2D\Moving Platform\MovingPlatformEffects.cs" />
+     <Compile Include="Assets\Scripts\2D\Moving Platform\PlatformMover.cs" />
+     <Compile Include="Assets\Scripts\2D\OnDeathDestroy.cs" />
+     <Compile Include="Assets\Scripts\2D\PlatformTarget.cs" />
+     <Compile Include="Assets\Scripts\2D\Spaceship\Spaceship.cs" />
+     <Compile Include="Assets\Scripts\2D\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Effects\CollisionParticleEffect.cs" />
+     <Compile Include="Assets\Scripts\Effects\CollisionSoundEffect.cs" />
+     <Compile Include="Assets\Scripts\Effects\Foot.cs" />
+     <Compile Include="Assets\Scripts\Effects\SpecialEffectHandler.cs" />
+     <Compile Include="Assets\Scripts\Effects\StopEmittingAfterDelay.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\Collectible.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\Dialog.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\DialogTrigger.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\FallingPlatform.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\FallingPlatformVertical.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\GameData.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\HUD.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\Laser.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\NailSpikeEnemy.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\ParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\RotatingPlatform.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\SpikeBallMovement.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\SpikeTrigger.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\TransparentPlatform.cs" />
+     <Compile Include="Assets\Scripts\MyScripts\TransparentTrigger.cs" />
+     <Compile Include="Assets\Scripts\StartScreen.cs" />
+     <None Include="Assets\Custom Assets Packs\Ball Pack\Models\Textures\CustomizableGun_FreeED\readme.txt" />
+     <None Include="Assets\Custom Assets Packs\Rusted Metal Plate Textures\Readme.txt.txt" />
+     <None Include="Assets\Shaders\Particle Add (Overlay).shader" />
+     <None Include="Assets\Custom Assets Packs\Gem Shader\diamond shader.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{37828C8C-17C6-95B1-E65C-C5BC75C88773}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

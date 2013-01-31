@@ -8,6 +8,7 @@ public class Collectible : MonoBehaviour
     public int value;
     public float velocityUpDown;
     public float hightModifier = 0.75f;
+    public bool isSpecial = false;
 
     private float referenceY;
 
@@ -47,6 +48,14 @@ public class Collectible : MonoBehaviour
             AudioSource.PlayClipAtPoint(collisionSoundEffect.audioClip, transform.position, collisionSoundEffect.volumeModifier);
             Destroy(gameObject);
             GameData.Instance.Score += value;
+            if (isSpecial)
+            {
+                GameData.Instance.SpecialCoins++;
+            }
+            else
+            {
+                GameData.Instance.Coins++;
+            }
         }
     }
 }

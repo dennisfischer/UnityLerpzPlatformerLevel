@@ -11,6 +11,10 @@ public class GameData : MonoBehaviour
         dialog = null;
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 
     public static GameData Instance
     {
@@ -22,6 +26,8 @@ public class GameData : MonoBehaviour
                 newGO.AddComponent("GameData");
                 instance = newGO.GetComponent<GameData>();
                 instance.Deaths = 0;
+                instance.Coins = 0;
+                instance.SpecialCoins = 0;
             }
             return instance;
         }
@@ -51,5 +57,24 @@ public class GameData : MonoBehaviour
     {
         get;
         set;
+    }
+
+    public int SpecialCoins
+    {
+        get;
+        set;
+    }
+    public int Coins
+    {
+        get;
+        set;
+    }
+
+    internal void reset()
+    {
+        Coins = 0;
+        SpecialCoins = 0;
+        Deaths = 0;
+        Score = 0;
     }
 }

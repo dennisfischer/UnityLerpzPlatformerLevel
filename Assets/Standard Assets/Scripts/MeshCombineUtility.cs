@@ -24,7 +24,7 @@ public class MeshCombineUtility {
 				if (generateStrips)
 				{
 					// SUBOPTIMAL FOR PERFORMANCE
-					int curStripCount = combine.mesh.GetTriangleStrip(combine.subMeshIndex).Length;
+					int curStripCount = combine.mesh.GetTriangles(combine.subMeshIndex).Length;
 					if (curStripCount != 0)
 					{
 						if( stripCount != 0 )
@@ -118,7 +118,7 @@ public class MeshCombineUtility {
 			{
 				if (generateStrips)
 				{
-					int[] inputstrip = combine.mesh.GetTriangleStrip(combine.subMeshIndex);
+                    int[] inputstrip = combine.mesh.GetTriangleStrip(combine.subMeshIndex);
 					if (stripOffset != 0)
 					{
 						if ((stripOffset & 1) == 1)
@@ -144,7 +144,7 @@ public class MeshCombineUtility {
 				}
 				else
 				{
-					int[]  inputtriangles = combine.mesh.GetTriangles(combine.subMeshIndex);
+                    int[] inputtriangles = combine.mesh.GetTriangleStrip(combine.subMeshIndex);
 					for (int i=0;i<inputtriangles.Length;i++)
 					{
 						triangles[i+triangleOffset] = inputtriangles[i] + vertexOffset;

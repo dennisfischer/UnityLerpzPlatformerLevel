@@ -6,12 +6,12 @@ public class StartScreen : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(25, 25, 100, 50), "Welcome to the Unity Lerpz Level!!");
-        if (GUI.Button(new Rect(25, 75, 100, 30), "START"))
+        GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 100, 200, 200), "Welcome to the Unity Lerpz Level!!");
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 15, 200, 30), "Play"))
         {
             Application.LoadLevel("Level_1");
         }
-        if (GUI.Button(new Rect(25, 75, 125, 30), "Exit"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 65, 200, 30), "Exit"))
         {
             Application.Quit();
         }

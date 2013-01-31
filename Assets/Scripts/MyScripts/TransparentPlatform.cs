@@ -8,14 +8,14 @@ public class TransparentPlatform : MonoBehaviour
 
     void Start()
     {
-        shader = Shader.Find("Transparent/Diffuse");
+        shader = Shader.Find("Transparent/Bumped Specular");
         changeAlpha(1f, false);
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Player")
-            changeAlpha(0.1f, true);
+            changeAlpha(0.5f, true);
     }
 
     private void changeAlpha(float alpha, bool trigger)

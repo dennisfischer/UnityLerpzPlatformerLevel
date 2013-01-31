@@ -28,7 +28,8 @@ public class SpikeBallMovement : MonoBehaviour
         if (attack && !reset && transform.localPosition.y < 0)
         {
             reset = true;
-            rigidbody.AddForce(Vector3.up * (resetSpeed + attackSpeed));
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(Vector3.up * (resetSpeed));
             audio.Play();
         }
     }
